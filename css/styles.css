@@ -1,3 +1,7 @@
+html {
+    background-color: lightgrey;
+}
+
 body  {
     font-family: Helvetica, Arial, sans-serif;
 }
@@ -6,12 +10,9 @@ ul {
     list-style: none;
 }
 
-h1 {
+header > h1 {
     text-transform: uppercase;
-}
-
-article h1 {
-    text-transform: none;
+    display: inline;
 }
 
 .html5-tag {
@@ -20,4 +21,8 @@ article h1 {
 
 #special-one {
     color: red;
+}
+
+.profile-image {
+    height: 50px;
 }
