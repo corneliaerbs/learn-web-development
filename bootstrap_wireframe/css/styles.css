@@ -1,0 +1,30 @@
+html {
+	
+	background-color: white;
+	height: 100%;
+}
+
+body {
+	background-color: #ddd;
+	height: 100%;
+}
+
+.main-header {
+	padding-top: 20px;
+}
+
+.logo {
+	text-align: center;
+}
+
+logo > img {
+	padding-left: 20px;
+}
+
+.search-input {
+	width: auto;
+}
+
+.form-search {
+	margin-top: 5px;
+}
