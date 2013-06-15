@@ -10,22 +10,77 @@
 <body>
   <div class="container">
     <header class="row">
-      <h1 id="banner">My Awesome App</h1>
+      <h1 id="banner" class="span12">My Awesome App</h1>
     </header>
-    <nav id="primary-navigation" class="row">
-      <div class="span12">
-      <ul>
-        <li class="selected"><a href="#">Home</a></li>
-        <li><a href="#">Features</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact Us</a></li>
-      </ul>
-    </div>
-    </nav>
+      <nav id="primary-navigation" class="row">
+        <div class="span12 tabbable">
+          <ul class="nav nav-tabs">
+            <li class="active"><a href="#tab1" data-toggle="tab">Home</a></li>
+            <li><a href="#tab2" data-toggle="tab">Features</a></li>
+            <li><a href="#tab3" data-toggle="tab">About</a></li>
+            <li><a href="#tab4" data-toggle="tab">Contact Us</a></li>
+          </ul>
+        </div>
+      </nav>
     <section class="row">
       <article class="span9">
-        <h2>This is the main content well</h2>
-        <p>This is a short paragraph to highlight where the general content will go.</p>
+        <div class="hero-unit">
+          <hgroup>
+            <h1>Version 2.0 Is Here!</h1>
+            <h2>All new features, lots of improvements</h2>
+          </hgroup>
+          <h4>A more perfect package you&rsquo;re not likely to find</h4>
+          <p>Our team has been busy this past year, completely revamping the inner workings of our
+            application. Faster page loads, better search, and mobile integration.</p>
+          <p><a href="#" class="btn btn-primary btn-large" data-placement="bottom" data-trigger="hover" title="Test">Download Now</a></p>
+        </div>
+          <ul class="thumbnails">
+            <li class="span3">
+              <figure>
+                <img src="http://placehold.it/300x200" alt="3 column placeholder" />
+                <figcaption>
+                  <h5>Image 3 title</h5>
+                  <p>This is a short caption. It contains some technical language like
+                  domain-specific terms like <a href="#"
+                  class="tooltips"
+                  data-placement="top"
+                  data-trigger="hover"
+                  data-title="HTML: Hyper Text Markup Language"
+                  >HTML</a></p>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="span3">
+              <figure>
+                <img src="http://placehold.it/300x200" alt="3 column placeholder" />
+                <figcaption>
+                  <h5>Image 3 title</h5>
+                  <p>This is a short caption. It contains some technical language like
+                  domain-specific terms like <a href="#"
+                  class="tooltips"
+                  data-placement="top"
+                  data-trigger="hover"
+                  data-title="CSS: Cascading Style Sheets"
+                  >CSS</a></p>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="span3">
+              <figure>
+                <img src="http://placehold.it/300x200" alt="3 column placeholder" />
+                <figcaption>
+                  <h5>Image 3 title</h5>
+                  <p>This is a short caption. It contains some technical language like
+                  domain-specific terms like <a href="#"
+                  class="tooltips"
+                  data-placement="top"
+                  data-trigger="hover"
+                  data-title="JS: Javascript&mdash;The fresh language"
+                  >JS</a></p>
+                </figcaption>
+              </figure>
+            </li>
+          </ul>
       </article>
       <aside class="span3">
         <h3>This is the sidebar</h3>
@@ -40,5 +95,11 @@
   </div>
   <script src="js/jquery-1.8.2.min.js"></script>
   <script src="js/bootstrap.js"></script>
+  // Add just above the closing body tag
+  // Activate the tooltips
+  <script type="text/javascript" charset="utf-8">
+    var tooltips = $('a.tooltips, .btn-large');
+    $(tooltips).tooltip();
+  </script>
 </body>
 </html>
