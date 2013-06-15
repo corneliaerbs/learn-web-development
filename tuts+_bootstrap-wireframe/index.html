@@ -10,7 +10,14 @@
 <body>
   <div class="container">
     <header class="row">
-      <h1 id="banner" class="span12">My Awesome App</h1>
+      <div class="span7">
+        <h1 id="banner">My Awesome App</h1>
+      </div>
+      <div class="span5">
+        <input type="search" placeholder="Enter search term" data-provide="typeahead"
+          id="search"/>
+        <a href="#myModal" role="button" class="btn" data-toggle="modal">Login</a>
+      </div>
     </header>
       <nav id="primary-navigation" class="row">
         <div class="span12 tabbable">
@@ -47,6 +54,21 @@
                   data-trigger="hover"
                   data-title="HTML: Hyper Text Markup Language"
                   >HTML</a></p>
+                  <p>
+                    <a href="#"
+                    id="test"
+                    class="btn btn-primary popover-link"
+                    data-placement="right"
+                    data-html="true"
+                    data-content="
+                    <a href='#'>Facebook</a><br/>
+                    <a href='#'>Twitter</a><br/>
+                    <a href='#'>Tumblr</a><br/>
+                    <a href='#'>Flickr</a><br/>
+                    "
+                    data-title="Share this image"
+                    >Share</a>
+                  </p>
                 </figcaption>
               </figure>
             </li>
@@ -62,6 +84,21 @@
                   data-trigger="hover"
                   data-title="CSS: Cascading Style Sheets"
                   >CSS</a></p>
+                  <p>
+                    <a href="#"
+                    id="test"
+                    class="btn btn-primary popover-link"
+                    data-placement="right"
+                    data-html="true"
+                    data-content="
+                    <a href='#'>Facebook</a><br/>
+                    <a href='#'>Twitter</a><br/>
+                    <a href='#'>Tumblr</a><br/>
+                    <a href='#'>Flickr</a><br/>
+                    "
+                    data-title="Share this image"
+                    >Share</a>
+                  </p>
                 </figcaption>
               </figure>
             </li>
@@ -77,6 +114,21 @@
                   data-trigger="hover"
                   data-title="JS: Javascript&mdash;The fresh language"
                   >JS</a></p>
+                  <p>
+                    <a href="#"
+                    id="test"
+                    class="btn btn-primary popover-link"
+                    data-placement="right"
+                    data-html="true"
+                    data-content="
+                    <a href='#'>Facebook</a><br/>
+                    <a href='#'>Twitter</a><br/>
+                    <a href='#'>Tumblr</a><br/>
+                    <a href='#'>Flickr</a><br/>
+                    "
+                    data-title="Share this image"
+                    >Share</a>
+                  </p>
                 </figcaption>
               </figure>
             </li>
@@ -93,13 +145,43 @@
       </div>
     </footer>
   </div>
+  <!-- Add this directly below div class="container"> -->
+  <!-- Modal -->
+  <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog"
+  aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+      <h3 id="myModalLabel">Catchy modal header here</h3>
+    </div>
+    <div class="modal-body">
+      <p><label for="username">Username</label><input type="text" name="username" value=""
+      placeholder="Enter username" id="username">
+      </p>
+      <p><label for="password">Password</label><input type="password" name="password"
+      value="" placeholder="Enter password" id="password">
+      </p>
+    </div>
+    <div class="modal-footer">
+      <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+      <button class="btn btn-primary">Save changes</button>
+    </div>
+  </div>
   <script src="js/jquery-1.8.2.min.js"></script>
   <script src="js/bootstrap.js"></script>
-  // Add just above the closing body tag
-  // Activate the tooltips
   <script type="text/javascript" charset="utf-8">
+    // Add just above the closing body tag
+    // Activate the tooltips
     var tooltips = $('a.tooltips, .btn-large');
     $(tooltips).tooltip();
+    
+    // Prevent default links actions and page jumping
+    var links = $('a');
+    links.on('click', function (e){
+      e.preventDefault();
+    });
+    // Activate the popovers
+    var popovers = $('a.popover-link');
+    popovers.popover();
   </script>
 </body>
 </html>
