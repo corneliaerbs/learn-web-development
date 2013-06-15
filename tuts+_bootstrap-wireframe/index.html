@@ -10,10 +10,10 @@
 <body>
   <div class="container">
     <header class="row">
-      <div class="span7">
+      <div class="span9">
         <h1 id="banner">My Awesome App</h1>
       </div>
-      <div class="span5">
+      <div class="span3">
         <input type="search" placeholder="Enter search term" data-provide="typeahead"
           id="search"/>
         <a href="#myModal" role="button" class="btn" data-toggle="modal">Login</a>
@@ -182,6 +182,25 @@
     // Activate the popovers
     var popovers = $('a.popover-link');
     popovers.popover();
+    
+var search = $('input#search');
+$(search).typeahead({
+  source: [
+    'Dave Mustaine',
+    'Tom Morello',
+    'Jim Root',
+    'Kirk Hammett',
+    'Joe Perry',
+    'Jimi Hendrix',
+    'Eric Clapton',
+    'Billy Duffy',
+    'Johnny Hickman',
+    'Eddie Van Halen',
+    'Dimebag Darrell',
+    'Noel Gallagher'
+  ],
+  items: 5
+});
   </script>
 </body>
 </html>

@@ -68,3 +68,9 @@ header a {
   float: right;
   margin: 20px 0 0 20px;
 }
+
+/* Search box */
+header input {
+  margin-top: 20px;
+  width: 90%;
+}
