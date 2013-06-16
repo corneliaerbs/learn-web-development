@@ -6,3 +6,8 @@ html {
   margin-bottom: 10px;
   margin-top: 10px;
 }
+
+.invert {
+  background-color: #333;
+  color: white;
+}
