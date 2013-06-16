@@ -11,3 +11,22 @@ html {
   background-color: #333;
   color: white;
 }
+
+.border,border-top {
+  border: 1px solid #333;
+}
+
+.border-top {
+  border-bottom: none;
+}
+
+.plus-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  margin: -20px auto 0;
+  background-color: white;
+  text-align: center;
+  font-size: 25px;
+  padding-top: 5px;
+}
